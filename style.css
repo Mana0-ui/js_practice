@@ -1,0 +1,350 @@
+@charset "UTF-8";
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  position: relative;
+}
+
+/* ホバーで色が変わるボタン --------------- */
+.btn1 {
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  transition: all 0.3s;
+}
+.btn1:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ホバーで影ができるボタン --------------- */
+.btn2 {
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  transition: all 0.3s;
+}
+.btn2:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ホバーで色が変わる＋影ができるボタン --------------- */
+.btn3 {
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  transition: all 0.3s;
+}
+.btn3:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  color: white;
+}
+
+/* ホバーで色が変わる＋影がなくなるボタン --------------- */
+.btn4 {
+  width: 150px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+.btn4:hover {
+  box-shadow: none;
+  background-color: white;
+  color: black;
+}
+
+/* ホバーで文字の間隔が広くなるボタン --------------- */
+.btn5 {
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  transition: all 0.3s;
+}
+.btn5:hover {
+  background-color: black;
+  color: white;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 180px;
+}
+
+/* ホバーで影ができる＋前に出てくるボタン --------------- */
+.btn6 {
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  transition: all 0.3s;
+}
+.btn6:hover {
+  box-shadow: 5px 5px black;
+  transform: translate(-2.5px, -2.5px);
+}
+
+/* ホバーで影ができる＋前に出てくるボタン --------------- */
+.btn7 {
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  box-shadow: 2px 2px black;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.btn7:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* ホバーで右から左に色が変わるボタン --------------- */
+.btn8 {
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn8 span {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-color: black;
+}
+.btn8:hover {
+  color: white;
+}
+.btn8:hover span {
+  transform: none;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+
+/* ホバーで右から左に色が変わるボタン --------------- */
+.btn9 {
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn9::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-color: black;
+}
+.btn9:hover {
+  color: white;
+}
+.btn9:hover::before {
+  transform: none;
+  transition: transform 0.3s cubic-bezier(0.68, 0.01, 0.29, 1.28);
+  z-index: -1;
+}
+
+/* ホバーで上から閉じるボタン --------------- */
+.btn10 {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  display: block;
+  margin: 30px auto;
+  position: relative;
+  transition: all 0.3s;
+  z-index: 1;
+  transform-style: preserve-3d;
+  perspective: 300px;
+}
+.btn10 span {
+  display: inline-block;
+  transform: translateZ(20px);
+}
+.btn10::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotateX(90deg);
+  transform-origin: top center;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.btn10:hover {
+  color: white;
+}
+.btn10:hover::before {
+  transform: none;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* ホバーで上から閉じるボタン --------------- */
+.btn10 {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  display: block;
+  margin: 30px auto;
+  position: relative;
+  transition: all 0.3s;
+  z-index: 1;
+  transform-style: preserve-3d;
+  perspective: 300px;
+}
+.btn10 span {
+  display: inline-block;
+  transform: translateZ(20px);
+}
+.btn10::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotateX(90deg);
+  transform-origin: top center;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.btn10:hover {
+  color: white;
+}
+.btn10:hover::before {
+  transform: none;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* 回転するボタン */
+.btn11 {
+  position: relative;
+  display: block;
+  transform-style: preserve-3d;
+  perspective: 300px;
+  width: 150px;
+  height: 40px;
+  margin: 0 auto;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  font-size: small;
+}
+.btn11 span {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  line-height: 38px;
+  transition: all 0.3s;
+  transform-origin: center center -25px;
+}
+.btn11 .hovering {
+  background-color: black;
+  color: white;
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+.btn11 .default {
+  background-color: white;
+  color: black;
+  transform: rotateX(0);
+}
+.btn11:hover .hovering {
+  transform: rotateX(0);
+  opacity: 1;
+}
+.btn11:hover .default {
+  transform: rotateX(-90deg);
+  opacity: 0;
+}
+
+/* ---------------------------------- *//*# sourceMappingURL=style.css.map */

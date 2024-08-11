@@ -1,0 +1,483 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#container{
+position: relative;   
+}
+
+$cWhite:white;
+$cBlack:black;
+
+/* ホバーで色が変わるボタン --------------- */
+.btn1{
+    
+    width: 150px;
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    transition: all 0.3s;   
+
+
+    &:hover{
+        background-color: $cBlack;
+        color: white;
+    }
+
+}
+
+/* ホバーで影ができるボタン --------------- */
+.btn2{
+    width: 150px;
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    transition: all 0.3s;   
+
+
+    &:hover{
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+       
+    }
+
+}
+
+/* ホバーで色が変わる＋影ができるボタン --------------- */
+.btn3{
+    width: 150px;
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    transition: all 0.3s;   
+
+
+    &:hover{
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        background-color: $cBlack;
+        color: $cWhite;
+       
+    }
+
+}
+
+/* ホバーで色が変わる＋影がなくなるボタン --------------- */
+.btn4{
+    width: 150px;
+    background-color: $cBlack;
+    color: $cWhite;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    transition: all 0.3s;   
+
+    &:hover{
+        box-shadow:none;
+        background-color: $cWhite;
+        color: $cBlack;
+       
+    }
+
+}
+
+/* ホバーで文字の間隔が広くなるボタン --------------- */
+.btn5{
+    width: 150px;
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    transition: all 0.3s;   
+
+    &:hover{
+        background-color: $cBlack;
+        color: $cWhite;
+        letter-spacing: 3px;
+        text-align: center;
+        width: 180px;
+       
+    }
+
+}
+
+/* ホバーで影ができる＋前に出てくるボタン --------------- */
+.btn6{
+    width: 150px;
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    transition: all 0.3s;   
+
+    &:hover{
+        box-shadow: 5px 5px $cBlack;
+        transform: translate(-2.5px, -2.5px);
+    }
+
+}
+
+/* ホバーで影ができる＋前に出てくるボタン --------------- */
+.btn7{
+    width: 150px;
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    box-shadow: 2px 2px $cBlack;
+    border-radius: 5px;
+    transition: all 0.3s;   
+
+    &:hover{
+        transform: translate(2px, 2px);
+        box-shadow: none;
+
+    }
+
+}
+
+/* ホバーで右から左に色が変わるボタン --------------- */
+.btn8{
+    width: 150px;
+    height: 40px;
+    background-color: $cWhite;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    position: relative;
+    
+    // ホバーされていないときは、spanを右に隠しておく
+    overflow: hidden;
+
+    // ローカルスタックコンテキストを作成する
+    z-index: 1;
+
+    & span{
+        display: inline-block;
+        position: absolute;
+    
+        // spanタグの大きさをbtn8クラスと同じにする
+        width: 100%;
+        height: 100%;
+
+        // btn8クラスの右上位置に固定する
+        top: 0;
+        left: 0;
+
+        // ホバーされていないときは、右に隠しておく
+        transform: translateX(-100%);
+
+        background-color: $cBlack;
+
+    }
+
+    &:hover{
+        & span{
+            transform: none;
+            transition: transform 0.3s; 
+
+            // Button8の後ろに黒背景を表示する
+            z-index: -1;  
+        }
+
+        color: $cWhite;
+    }
+   
+}
+
+/* ホバーで右から左に色が変わるボタン --------------- */
+.btn9{
+    width: 150px;
+    height: 40px;
+    background-color: $cWhite;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin:30px auto;
+    position: relative;
+    
+    // ホバーされていないときは、spanを右に隠しておく
+    overflow: hidden;
+
+    // ローカルスタックコンテキストを作成する
+    z-index: 1;
+
+    // 疑似要素を使う(空の<span>が追記されている扱い)
+    &::before{
+        // 疑似要素の内容を指定する、文章を入れられる
+        content:'';
+        display: inline-block;
+        position: absolute;
+    
+        // spanタグの大きさをbtn9クラスと同じにする
+        width: 100%;
+        height: 100%;
+
+        // btn8クラスの右上位置に固定する
+        top: 0;
+        left: 0;
+
+        // ホバーされていないときは、右に隠しておく
+        transform: translateX(-100%);
+
+        background-color: $cBlack;
+
+    }
+
+    &:hover{
+        &::before{
+            transform: none;
+            // アニメーションの緩急を調整する
+            transition:transform 0.3s cubic-bezier(0.68, 0.01, 0.29, 1.28);
+
+            // Button8の後ろに黒背景を表示する
+            z-index: -1;  
+        }
+
+        color: $cWhite;
+    }
+   
+}
+
+/* ホバーで上から閉じるボタン --------------- */
+.btn10{
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+   
+    display: block;
+    margin:30px auto;
+    position: relative;
+    transition: all 0.3s;
+    
+    // ローカルスタックコンテキストを作成する
+    z-index: 1;
+    // 子要素(before)に3dアニメーションを付与する
+    transform-style: preserve-3d;
+    // 奥行きを設定する(値が小さいと動きが大きく見える)
+    perspective: 300px;
+    // アニメーションを見る視点を指定する
+    //perspective-origin: -100% 50%;
+
+    & span{
+        display: inline-block;
+        // z軸の20pxにアニメーションが来た場合、文字を白くする
+        transform: translateZ(20px);
+    }
+
+    // 疑似要素を使う(空の<span>が追記されている扱い)
+    &::before{
+        // 疑似要素の内容を指定する、文章を入れられる
+        content:"";
+        display: inline-block;
+        position: absolute;
+        background-color: $cBlack;
+
+        // spanタグの大きさをbtn10クラスと同じにする
+        width: 100%;
+        height: 100%;
+
+        // btn10クラスの右上位置に固定する
+        top: 0;
+        left: 0;
+
+        // アニメーションの回転方向を指定する
+        transform: rotateX(90deg);
+        // 回転軸を指定する
+        transform-origin:top center;
+        // ホバーするまで回転軸を見えないようにする
+        opacity: 0;
+        // アニメーションの緩急を調整する
+        transition: all 0.8s;
+
+    }
+
+    &:hover{
+        &::before{
+            transform: none;
+            z-index: -1;
+            opacity: 1;
+        }
+
+        color: $cWhite;
+    }
+   
+}
+
+/* ホバーで上から閉じるボタン --------------- */
+.btn10{
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+   
+    display: block;
+    margin:30px auto;
+    position: relative;
+    transition: all 0.3s;
+    
+    // ローカルスタックコンテキストを作成する
+    z-index: 1;
+    // 子要素(before)に3dアニメーションを付与する
+    transform-style: preserve-3d;
+    // 奥行きを設定する(値が小さいと動きが大きく見える)
+    perspective: 300px;
+    // アニメーションを見る視点を指定する
+    //perspective-origin: -100% 50%;
+
+    & span{
+        display: inline-block;
+        // z軸の20pxにアニメーションが来た場合、文字を白くする
+        transform: translateZ(20px);
+    }
+
+    // 疑似要素を使う(空の<span>が追記されている扱い)
+    &::before{
+        // 疑似要素の内容を指定する、文章を入れられる
+        content:"";
+        display: inline-block;
+        position: absolute;
+        background-color: $cBlack;
+
+        // spanタグの大きさをbtn10クラスと同じにする
+        width: 100%;
+        height: 100%;
+
+        // btn10クラスの右上位置に固定する
+        top: 0;
+        left: 0;
+
+        // アニメーションの回転方向を指定する
+        transform: rotateX(90deg);
+        // 回転軸を指定する
+        transform-origin:top center;
+        // ホバーするまで回転軸を見えないようにする
+        opacity: 0;
+        // アニメーションの緩急を調整する
+        transition: all 0.8s;
+
+    }
+
+    &:hover{
+        &::before{
+            transform: none;
+            z-index: -1;
+            opacity: 1;
+        }
+
+        color: $cWhite;
+    }
+   
+}
+
+/* 回転するボタン */
+.btn11{
+    position: relative;
+    display: block;
+    transform-style:preserve-3d;
+    perspective: 300px;
+    width: 150px;
+    height: 40px;
+
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    font-size: small;
+    
+    & span{
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $cBlack;
+
+        // 高さにボーダーを含める
+        box-sizing: border-box;
+        // border 1px×上下(2) ＋ 38px = 40px
+        line-height: 38px;
+        transition: all 0.3s;
+
+        // X軸 Y軸 Z軸(Button11面から奥に25px離れた場所、hovering面の中心で回転する)
+        transform-origin: center center -25px ;
+
+    }
+        & .hovering{
+            background-color: $cBlack;
+            color: $cWhite;
+
+            // 上に隠しておく
+            transform: rotateX(90deg);
+            opacity: 0;
+        }
+
+        & .default{
+            background-color: $cWhite;
+            color: $cBlack;
+
+            transform: rotateX(0);
+        }
+
+        &:hover{
+            & .hovering{
+                transform: rotateX(0);
+                opacity: 1;
+            }
+
+            & .default{
+                transform: rotateX(-90deg);
+                opacity: 0;
+
+            }
+        }
+        
+    }
+
+
+/* ---------------------------------- */
